@@ -28,7 +28,7 @@ RUN cd /tmp/gsl/src && \
 
 # Install zproto
 RUN cd /tmp && git clone https://github.com/zeromq/zproto.git && \
-    cd /tmp/zproto && git checkout 4ca8a24406f5c9c8d2528521d9d32782378e0a0c
+    cd /tmp/zproto && git checkout c5d03afa7d36207297e29b27f26d6aba6a2b4b80
 RUN cd /tmp/zproto && \
    ./autogen.sh && ./configure && \
     make && make install 

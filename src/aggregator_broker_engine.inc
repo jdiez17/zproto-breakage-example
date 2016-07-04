@@ -17,7 +17,7 @@
 //  State machine constants
 
 typedef enum {
-    start_state = 1
+    start_state     = 1
 } state_t;
 
 typedef enum {
@@ -384,7 +384,7 @@ s_client_execute (s_client_t *self, event_t event)
                     if (!self->exception) {
                         //  send COMPONENT_REGISTER_OK
                         if (self->server->verbose)
-                            zsys_debug ("%s:         $ send COMPONENT_REGISTER_OK",
+                            zsys_debug ("%s:         $ send    COMPONENT_REGISTER_OK",
                                 self->log_prefix);
                         aggregator_msg_set_id (self->server->message, AGGREGATOR_MSG_COMPONENT_REGISTER_OK);
                         aggregator_msg_set_routing_id (self->server->message, self->routing_id);
@@ -402,7 +402,7 @@ s_client_execute (s_client_t *self, event_t event)
                     if (!self->exception) {
                         //  send LIST_COMPONENTS_OK
                         if (self->server->verbose)
-                            zsys_debug ("%s:         $ send LIST_COMPONENTS_OK",
+                            zsys_debug ("%s:         $ send    LIST_COMPONENTS_OK",
                                 self->log_prefix);
                         aggregator_msg_set_id (self->server->message, AGGREGATOR_MSG_LIST_COMPONENTS_OK);
                         aggregator_msg_set_routing_id (self->server->message, self->routing_id);

@@ -147,3 +147,25 @@ handle_list_components (client_t *self)
 {
     printf("Do the other thing with the other thing\n");
 }
+
+
+//  ---------------------------------------------------------------------------
+//  handle_component_register
+//
+
+static void
+handle_component_register (client_t *self)
+{
+
+}
+
+
+//  ---------------------------------------------------------------------------
+//  handle_list_components
+//
+
+static void
+handle_list_components (client_t *self)
+{
+
+}
