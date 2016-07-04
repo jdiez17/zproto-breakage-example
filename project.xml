@@ -1,0 +1,16 @@
+<project
+    name = "aggregator"
+    description = "Ninox System Aggregator"
+    script = "zproject">
+
+    <version major = "0" minor = "1" patch = "0" />
+
+    <use project = "libzmq" />
+    <use project = "czmq" />
+
+    <class name = "aggregator_msg">Aggregator Protocol</class>
+    <class name = "aggregator_broker">System Aggregator Broker</class>
+
+    <model name = "aggregator_msg" />
+    <model name = "aggregator_broker" />
+</project>

@@ -1,0 +1,24 @@
+<class
+    name = "aggregator_msg"
+    signature = "1"
+    title = "System Aggregator Protocol"
+    script = "zproto_codec_c"
+    package_dir = "../include"
+    source_dir = ".">
+
+    This is the System Aggregator Protocol v0.1.0
+
+    <define name = "VERSION" value = "1" />
+
+    <message name = "COMPONENT REGISTER">
+        Component signals to the aggregator that it is ready.
+        <field name = "component" type = "string">Component name</field>
+        <field name = "variables" type = "strings">
+            List of variables that this component exposes, where each variable is a string such that the name of the variable is followed by a comma and the variable mode, which can be 'R' or 'RW'. For example, "temp1,RW".
+        </field>
+        <field name = "methods" type = "strings">List of methods that this component exposes</field>
+    </message>
+    <message name = "COMPONENT REGISTER OK">
+        Aggregator signals to the component that it has been registered successfully.
+    </message>
+</class>

@@ -1,0 +1,22 @@
+<class
+    name = "aggregator_broker"
+    title = "System Aggregator Broker"
+    script = "zproto_server_c"
+    protocol_class = "aggregator_msg"
+    package_dir = "../include"
+    source_dir = ".">
+
+    System Aggregator Broker
+
+    <state name = "start"> <!--inherit = "ping">-->
+        <event name = "COMPONENT REGISTER">
+            <action name = "handle component register" />
+            <action name = "send" message = "COMPONENT REGISTER OK" />
+        </event>
+
+        <event name = "LIST COMPONENTS">
+            <action name = "handle list components" />
+            <action name = "send" message = "LIST COMPONENTS OK" />
+        </event>
+    </state>
+</class>
